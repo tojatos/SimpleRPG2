@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -25,7 +26,8 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="191.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="314.0" minHeight="10.0" prefHeight="311.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="324.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="314.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="90.0" prefWidth="300.0" text="SHOP" textAlignment="CENTER">
@@ -50,48 +52,56 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="1">
+                  <Button fx:id="mediumHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="2">
+                  <Button fx:id="bigHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="2">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.rowIndex="1">
+                  <Button fx:id="woodenSwordButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="silverSwordButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Button fx:id="diamondSwordButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.rowIndex="2">
+                  <Button fx:id="leatherArmourButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.rowIndex="2">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button fx:id="silverArmourButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="smallHpPotButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Button fx:id="dragonSkinButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="106.0" prefWidth="100.0" styleClass="char-type-button" text="HP pot" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
                </children>
             </GridPane>
+            <Label fx:id="goldLabel" contentDisplay="CENTER" prefHeight="42.0" prefWidth="300.0" text="Gold: 0" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Tunga" size="32.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
          </children>
       </GridPane>
       <GridPane GridPane.columnIndex="1">
