@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ui/BeforeFightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/BeforeFightController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/before_fight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/before_fight.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -59,7 +58,7 @@
     <session id="-826042419">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.9" value="1" />
@@ -129,20 +128,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/before_fight.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/BeforeFightController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="254">
               <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -243,9 +242,9 @@
         <option value="$PROJECT_DIR$/src/ui/Main.java" />
         <option value="$PROJECT_DIR$/src/ui/GameController.java" />
         <option value="$PROJECT_DIR$/src/simplerpg/Character.java" />
-        <option value="$PROJECT_DIR$/src/ui/before_fight.fxml" />
         <option value="$PROJECT_DIR$/src/simplerpg/MainForm.java" />
         <option value="$PROJECT_DIR$/src/ui/BeforeFightController.java" />
+        <option value="$PROJECT_DIR$/src/ui/before_fight.fxml" />
       </list>
     </option>
   </component>
@@ -325,7 +324,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548023568687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548024022775" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
@@ -427,16 +426,15 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1547936986704" duration="2555000" />
       <workItem from="1547983764415" duration="1122000" />
-      <workItem from="1547985289163" duration="20032000" />
+      <workItem from="1547985289163" duration="20487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25011000" />
+    <option name="totallyTimeSpent" value="25466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.13539445" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -515,14 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/before_fight.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/simplerpg/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -573,7 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/BeforeFightController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="254">
           <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -582,6 +572,14 @@
             <element signature="e#1203#1204#0" expanded="true" />
             <element signature="e#1282#1283#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/before_fight.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
         </state>
       </provider>
     </entry>
