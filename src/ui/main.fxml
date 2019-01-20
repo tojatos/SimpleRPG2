@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.GameController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -35,7 +35,7 @@
                <Font name="Tunga" size="30.0" />
            </font>
        </Label>
-      <TextField fx:id="playerNameField" onKeyPressed="#setPlayerName" prefHeight="64.0" prefWidth="392.0" visible="false" GridPane.rowIndex="3">
+      <TextField fx:id="playerNameField" onKeyPressed="#setCharacterName" prefHeight="64.0" prefWidth="392.0" GridPane.rowIndex="3">
          <font>
             <Font size="40.0" />
          </font>
@@ -50,7 +50,23 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="char-type-button" text="Paladin" textAlignment="CENTER" fx:id="paladinButton">
+            <Button fx:id="paladinButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="79.0" prefWidth="142.0" styleClass="char-type-button" text="Paladin" textAlignment="CENTER" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="warriorButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="142.0" styleClass="char-type-button" text="Warrior" textAlignment="CENTER" visible="false" GridPane.columnIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="berserkButton" alignment="CENTER" contentDisplay="CENTER" layoutX="144.0" layoutY="10.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="142.0" styleClass="char-type-button" text="Berserk" textAlignment="CENTER" visible="false" GridPane.columnIndex="2">
                <font>
                   <Font size="24.0" />
                </font>

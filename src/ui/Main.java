@@ -1,4 +1,4 @@
-package sample;
+package ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,8 +8,10 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+//    public static Stage window;
     @Override
     public void start(Stage primaryStage) throws Exception{
+//        window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("SIMPLE RPG");
         primaryStage.setScene(new Scene(root));
