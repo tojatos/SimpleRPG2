@@ -9,13 +9,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
-import javafx.stage.Window;
 import simplerpg.Character;
 import simplerpg.CharacterClass;
 import simplerpg.Game;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class GameController {
@@ -56,7 +53,9 @@ public class GameController {
     }
     private void LoadBeforeFightScene() {
         try {
-            inputInfoLabel.getScene().setRoot(FXMLLoader.load(getClass().getResource("before_fight.fxml")));
+            Scene s = inputInfoLabel.getScene();
+            s.setRoot(FXMLLoader.load(getClass().getResource("before_fight.fxml")));
+            s.getWindow().setWidth(600);
         } catch (IOException e) {
             e.printStackTrace();
         }

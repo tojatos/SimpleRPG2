@@ -25,13 +25,6 @@ public class Character extends Fighter {
         return null;
     }
 
-//    public int getExperience() {
-//        return experience;
-//    }
-//
-//    public void setExperience(int experience) {
-//        this.experience = experience;
-//    }
 
     public int getGold() {
         return gold;
