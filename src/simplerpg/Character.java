@@ -6,7 +6,8 @@ import simplerpg.DefenseMethods.LeatherArmour;
 import simplerpg.DefenseMethods.NoDefense;
 
 public class Character extends Fighter {
-//    private int experience = 0;
+    public int killedMonsters;
+    //    private int experience = 0;
     private int gold = 0;
 
     private Character(int healthPoints, int attackPoints, String name, IAttack attackMethod, IDefense defenseMethod) {

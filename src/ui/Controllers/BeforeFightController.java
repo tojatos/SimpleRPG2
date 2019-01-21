@@ -1,4 +1,4 @@
-package ui;
+package ui.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +8,8 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import simplerpg.Character;
 import simplerpg.*;
+import ui.SceneUtilities;
+import ui.SceneManager;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -49,7 +51,7 @@ public class BeforeFightController implements Observer {
 
     public void updateUI(){
         Character m = getGame().mainCharacter;
-        updateHpFill(m);
+        updateHpBar(m);
         updateGold();
         characterNameLabel.setText(m.getName());
         attackPointsLabel.setText(Integer.toString(m.getAttackPoints()));
@@ -68,11 +70,8 @@ public class BeforeFightController implements Observer {
     public void startFight(){
         MonsterFight fight = getGame().fight();
         if(fight == null) loadGameWonScene();
-        fight.addObserver(this);
-        loadFightScene();
-    }
-
-    private void loadFightScene() {
+//        fight.addObserver(this);
+        SceneManager.loadScene(SceneManager.Scenes.Fight);
     }
 
     private void loadGameWonScene() {
@@ -94,13 +93,9 @@ public class BeforeFightController implements Observer {
     private void updateGold() {
         goldLabel.setText("Gold: " + getGame().mainCharacter.getGold());
     }
-    private void updateHpFill(Character mainCharacter) {
-        characterHpFill.setProgress(mainCharacter.getHealthPoints() / (float) mainCharacter.getMaxHealthPoints());
-        Tooltip hpTooltip = new Tooltip();
-        hpTooltip.setText(mainCharacter.getHealthPoints() + "/" + mainCharacter.getMaxHealthPoints());
-        characterHpFill.setTooltip(hpTooltip);
+    private void updateHpBar(Fighter fighter) {
+        SceneUtilities.updateHpBar(characterHpFill, fighter);
     }
-
     private void addBuyListener(Button button, Item itemToBuy, Character characterBuying)
     {
         button.setOnAction(e -> {
@@ -111,7 +106,7 @@ public class BeforeFightController implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
-        if(o instanceof FightResult){
+//        if(o instanceof FightResult){
 //            FightResult r = ((FightResult) o);
 //            boolean isFightWon = r.isWon;
 //            if(!isFightWon) {
@@ -122,7 +117,7 @@ public class BeforeFightController implements Observer {
 //                ++killedMonsters;
 //                updateUI();
 //            }
-        }
+//        }
 
     }
 

@@ -20,5 +20,6 @@ public final class SceneManager {
         public static final String Main = "main.fxml";
         public static final String BeforeFight = "before_fight.fxml";
         public static final String Fight = "fight.fxml";
+        public static final String GameOver = "game_over.fxml";
     }
 }

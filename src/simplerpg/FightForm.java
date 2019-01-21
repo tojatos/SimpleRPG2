@@ -15,7 +15,7 @@ public class FightForm implements Observer {
     private JLabel monsterName;
     private MonsterFight currentFight;
     public void init(MonsterFight fight){
-//        FormUtilities.removeAllListeners(attackButton);
+//        SceneUtilities.removeAllListeners(attackButton);
         attackButton.addActionListener(a -> fight.attack());
         currentFight = fight;
 //        updateHpBar1(currentFight.character.getHealthPoints(), currentFight.character.getMaxHealthPoints());

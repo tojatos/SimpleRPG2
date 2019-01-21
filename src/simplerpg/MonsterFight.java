@@ -30,6 +30,7 @@ public class MonsterFight extends Observable {
     private void fightWon() {
 //        character.setExperience(character.getExperience() + monster.experienceWorth);
         character.setGold(character.getGold() + monster.goldWorth);
+        character.killedMonsters++;
         FightResult result = new FightResult();
         result.isWon = true;
 //        result.acquiredExperience = monster.experienceWorth;

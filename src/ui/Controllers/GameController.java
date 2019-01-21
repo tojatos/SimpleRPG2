@@ -1,4 +1,4 @@
-package ui;
+package ui.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +12,7 @@ import javafx.scene.input.KeyEvent;
 import simplerpg.Character;
 import simplerpg.CharacterClass;
 import simplerpg.Game;
+import ui.SceneManager;
 
 import java.io.IOException;
 
