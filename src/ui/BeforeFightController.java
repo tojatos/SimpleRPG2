@@ -36,19 +36,22 @@ public class BeforeFightController implements Observer {
     @FXML
     private void initialize() {
 
-        Character mainCharacter = getGame().mainCharacter;
-        updateHpFill(mainCharacter);
-        characterNameLabel.setText(mainCharacter.getName());
-        attackPointsLabel.setText(Integer.toString(mainCharacter.getAttackPoints()));
-        updateGold();
+        updateUI();
         addBuyListeners();
         fightButton.setOnAction(e -> startFight());
 
-        String nextMonsterText = getGame().monsters.size() != 0 ? "Next monster: " + getGame().monsters.peek().getName() : "Next monster: ???";
-        newMonsterLabel.setText(nextMonsterText);
-
         getGame().mainCharacter.addObserver(this);
         getGame().monsters.forEach(m -> m.addObserver(this));
+    }
+
+    public void updateUI(){
+        Character m = getGame().mainCharacter;
+        updateHpFill(m);
+        updateGold();
+        characterNameLabel.setText(m.getName());
+        attackPointsLabel.setText(Integer.toString(m.getAttackPoints()));
+        String nextMonsterText = getGame().monsters.size() != 0 ? "Next monster: " + getGame().monsters.peek().getName() : "Next monster: ???";
+        newMonsterLabel.setText(nextMonsterText);
     }
 
     public void startFight(){
@@ -91,7 +94,7 @@ public class BeforeFightController implements Observer {
     {
         button.setOnAction(e -> {
             Shop.Buy(characterBuying, itemToBuy);
-            updateGold();
+            updateUI();
         });
     }
 
