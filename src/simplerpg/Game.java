@@ -7,7 +7,7 @@ import java.util.Queue;
 public class Game {
     public Character mainCharacter;
     public Queue<Monster> monsters;
-    private MonsterFight activeFight;
+    public MonsterFight activeFight;
 
     public Game(Character mainCharacter) {
         this.mainCharacter = mainCharacter;

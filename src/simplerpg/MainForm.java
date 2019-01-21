@@ -119,19 +119,19 @@ public class MainForm implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
-        if(o instanceof FightResult){
-            FightResult r = ((FightResult) o);
-            boolean isFightWon = r.isWon;
-            if(!isFightWon) {
-                showGameFinishScreen();
-            }
-            else{
-//                r.acquiredExperience, r.acquiredGold
-                showMainGameScreen();
-                ++killedMonsters;
-                updateUI();
-            }
-        }
+//        if(o instanceof FightResult){
+//            FightResult r = ((FightResult) o);
+//            boolean isFightWon = r.isWon;
+//            if(!isFightWon) {
+//                showGameFinishScreen();
+//            }
+//            else{
+////                r.acquiredExperience, r.acquiredGold
+//                showMainGameScreen();
+//                ++killedMonsters;
+//                updateUI();
+//            }
+//        }
     }
     public void updateUI(){
         Character m = game.mainCharacter;

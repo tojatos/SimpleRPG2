@@ -1,8 +1,8 @@
 package ui;
 
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,9 +28,9 @@ public class GameController {
 
     @FXML
     private void initialize() {
-        paladinButton.setOnAction(event -> StartGame(characterName, CharacterClass.Paladin));
-        warriorButton.setOnAction(event -> StartGame(characterName, CharacterClass.Warrior));
-        berserkButton.setOnAction(event -> StartGame(characterName, CharacterClass.Berserk));
+        paladinButton.setOnAction(event -> startGame(characterName, CharacterClass.Paladin));
+        warriorButton.setOnAction(event -> startGame(characterName, CharacterClass.Warrior));
+        berserkButton.setOnAction(event -> startGame(characterName, CharacterClass.Berserk));
     }
 
     public void setCharacterName(KeyEvent keyEvent) {
@@ -46,19 +46,11 @@ public class GameController {
         berserkButton.setVisible(true);
     }
 
-    private void StartGame(String characterName, CharacterClass characterClass) {
+    private void startGame(String characterName, CharacterClass characterClass) {
         Character mainCharacter = simplerpg.Character.createCharacter(characterClass, characterName);
         Game = new Game(mainCharacter);
-        LoadBeforeFightScene();
+        SceneManager.loadScene(SceneManager.Scenes.BeforeFight);
     }
-    private void LoadBeforeFightScene() {
-        try {
-            Scene s = inputInfoLabel.getScene();
-            s.setRoot(FXMLLoader.load(getClass().getResource("before_fight.fxml")));
-            s.getWindow().setWidth(600);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 
 }
