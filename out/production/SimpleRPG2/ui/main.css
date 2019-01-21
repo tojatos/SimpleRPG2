@@ -1,24 +1,26 @@
 .root {
-    -fx-base: rgb(132, 145, 47);
-    -fx-background: rgb(225, 228, 203);
+    -fx-base: rgb(177, 149, 154);
+
+    -fx-background: #333333;
+    -fx-text-fill: #dadada;
+    /*-fx-background: rgb(187, 174, 5);*/
     -fx-border-color: black;
     -fx-border-width: 5;
     -fx-border-style: solid;
     -fx-font-family: Tunga;
 }
 .char-type-button {
-    //-fx-background-color: #fff;
     -fx-background-color:
-            #3c7fb1,
-            linear-gradient(#fafdfe, #e8f5fc),
-            linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
-    -fx-text-fill: black;
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-text-fill: white;
 }
+.char-type-button:focused,
 .char-type-button:hover {
-    -fx-background-color: green;
-
+    -fx-border-width: 2;
+    -fx-border-color: white;
+    -fx-border-style: solid;
 }
 

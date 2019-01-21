@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.BeforeFightController">
+<GridPane prefHeight="400.0" prefWidth="600.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.BeforeFightController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -123,7 +123,7 @@
                 <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ProgressBar fx:id="characterHpFill" prefHeight="29.0" prefWidth="300.0" progress="0.0" GridPane.rowIndex="1" />
+                  <ProgressBar fx:id="characterHpFill" prefHeight="29.0" prefWidth="300.0" progress="0.82" style="-fx-accent: green;" GridPane.rowIndex="1" />
                   <Label fx:id="characterNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="300.0" text="Ryszard" textAlignment="CENTER">
                      <font>
                         <Font name="Tunga" size="32.0" />
@@ -178,8 +178,8 @@
                       <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ImageView fitHeight="92.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <ImageView fitHeight="95.0" fitWidth="104.0" layoutX="52.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="attackMethodImage" fitHeight="92.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <ImageView fx:id="defenseMethodImage" fitHeight="95.0" fitWidth="104.0" layoutX="52.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="300.0" text="Sword:" textAlignment="CENTER">
                            <font>
                               <Font name="Tunga" size="32.0" />

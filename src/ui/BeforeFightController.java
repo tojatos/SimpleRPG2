@@ -1,13 +1,14 @@
 package ui;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import simplerpg.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
 import simplerpg.Character;
+import simplerpg.*;
 
-import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -27,6 +28,8 @@ public class BeforeFightController implements Observer {
     public Button dragonSkinButton;
     public Button fightButton;
     public Label newMonsterLabel;
+    public ImageView attackMethodImage;
+    public ImageView defenseMethodImage;
 
 
     private Game getGame() {
@@ -52,6 +55,14 @@ public class BeforeFightController implements Observer {
         attackPointsLabel.setText(Integer.toString(m.getAttackPoints()));
         String nextMonsterText = getGame().monsters.size() != 0 ? "Next monster: " + getGame().monsters.peek().getName() : "Next monster: ???";
         newMonsterLabel.setText(nextMonsterText);
+        setTooltip(attackMethodImage, m.getAttackMethod().getDescription());
+        setTooltip(defenseMethodImage, m.getDefenseMethod().getDescription());
+    }
+    private void setTooltip(ImageView image, String tooltipMessage) {
+        Tooltip t = new Tooltip();
+        t.setText(tooltipMessage);
+        Tooltip.install(image, t);
+
     }
 
     public void startFight(){
@@ -84,7 +95,7 @@ public class BeforeFightController implements Observer {
         goldLabel.setText("Gold: " + getGame().mainCharacter.getGold());
     }
     private void updateHpFill(Character mainCharacter) {
-        characterHpFill.setProgress(mainCharacter.getHealthPoints() / mainCharacter.getMaxHealthPoints());
+        characterHpFill.setProgress(mainCharacter.getHealthPoints() / (float) mainCharacter.getMaxHealthPoints());
         Tooltip hpTooltip = new Tooltip();
         hpTooltip.setText(mainCharacter.getHealthPoints() + "/" + mainCharacter.getMaxHealthPoints());
         characterHpFill.setTooltip(hpTooltip);
