@@ -141,7 +141,7 @@
                      <children>
                         <Label contentDisplay="CENTER" prefHeight="42.0" prefWidth="300.0" text="Attack points:">
                            <font>
-                              <Font name="Tunga" size="21.0" />
+                              <Font size="15.0" />
                            </font>
                            <padding>
                               <Insets left="10.0" />
