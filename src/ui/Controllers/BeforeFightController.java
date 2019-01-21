@@ -11,10 +11,7 @@ import simplerpg.*;
 import ui.SceneUtilities;
 import ui.SceneManager;
 
-import java.util.Observable;
-import java.util.Observer;
-
-public class BeforeFightController implements Observer {
+public class BeforeFightController {
     public ProgressBar characterHpFill;
     public Label characterNameLabel;
     public Label attackPointsLabel;
@@ -44,9 +41,6 @@ public class BeforeFightController implements Observer {
         updateUI();
         addBuyListeners();
         fightButton.setOnAction(e -> startFight());
-
-        getGame().mainCharacter.addObserver(this);
-        getGame().monsters.forEach(m -> m.addObserver(this));
     }
 
     public void updateUI(){
@@ -69,12 +63,8 @@ public class BeforeFightController implements Observer {
 
     public void startFight(){
         MonsterFight fight = getGame().fight();
-        if(fight == null) loadGameWonScene();
-//        fight.addObserver(this);
-        SceneManager.loadScene(SceneManager.Scenes.Fight);
-    }
-
-    private void loadGameWonScene() {
+        if(fight == null) SceneManager.loadScene(SceneManager.Scenes.GameOver);
+        else SceneManager.loadScene(SceneManager.Scenes.Fight);
     }
 
     private void addBuyListeners() {
@@ -102,23 +92,6 @@ public class BeforeFightController implements Observer {
             Shop.Buy(characterBuying, itemToBuy);
             updateUI();
         });
-    }
-
-    @Override
-    public void update(Observable observable, Object o) {
-//        if(o instanceof FightResult){
-//            FightResult r = ((FightResult) o);
-//            boolean isFightWon = r.isWon;
-//            if(!isFightWon) {
-//                showGameFinishScreen();
-//            }
-//            else{
-//                showMainGameScreen();
-//                ++killedMonsters;
-//                updateUI();
-//            }
-//        }
-
     }
 
 }
