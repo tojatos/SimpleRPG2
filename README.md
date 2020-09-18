@@ -1,5 +1,7 @@
 # Simple RPG 2
-A simple game written in Java with JavaFX GUI
+## A simple game written in Java with JavaFX GUI
+
+![Picture of the game](../media/simple_rpg.png?raw=true)
 
 The game is fully decoupled from UI.
 
